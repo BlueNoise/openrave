@@ -199,12 +199,12 @@ struct stdstring_from_python_str
 
     static void* convertible(PyObject* obj)
     {
-        return (PyString_Check(obj) || PyUnicode_Check(obj)) ? obj : 0;
+        return (PyUnicode_Check(obj) || PyUnicode_Check(obj)) ? obj : 0;
     }
 
     static void construct(PyObject* obj, py::converter::rvalue_from_python_stage1_data* data)
     {
-        if(PyString_Check(obj)) {
+        if(PyUnicode_Check(obj)) {
 #if PY_MAJOR_VERSION >= 3
             const char* value = PyUnicode_AsUTF8(obj);
 #else

@@ -105,7 +105,7 @@ using array_int = array_t<int>; // py::array_int
 #if PY_MAJOR_VERSION >= 3
 #define IS_PYTHONOBJECT_STRING(o) (!(o).is_none() && (PyUnicode_Check((o).ptr())))
 #else
-#define IS_PYTHONOBJECT_STRING(o) (!(o).is_none() && (PyString_Check((o).ptr()) || PyUnicode_Check((o).ptr())))
+#define IS_PYTHONOBJECT_STRING(o) (!(o).is_none() && (PyUnicode_Check((o).ptr()) || PyUnicode_Check((o).ptr())))
 #endif
 
 namespace openravepy
