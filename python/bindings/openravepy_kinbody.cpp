@@ -1170,10 +1170,10 @@ object PyJointInfo::GetDOF() {
 #if PY_MAJOR_VERSION >= 3
     return py::handle_to_object(PyLong_FromLong(pInfo->GetDOF()));
 #else
-    return py::handle_to_object(PyInt_FromLong(pInfo->GetDOF()));
+    return py::handle_to_object(PyLong_FromLong(pInfo->GetDOF()));
 #endif
 #else
-    return py::to_object(py::handle<>(PyInt_FromLong(pInfo->GetDOF())));
+    return py::to_object(py::handle<>(PyLong_FromLong(pInfo->GetDOF())));
 #endif
 }
 

@@ -114,28 +114,28 @@ py::object toPyObject(const rapidjson::Value& value)
 #ifdef USE_PYBIND11_PYTHON_BINDINGS
             return py::int_(value.GetInt64());
 #else
-            return py::to_object(py::handle<>(PyInt_FromLong(value.GetInt64())));
+            return py::to_object(py::handle<>(PyLong_FromLong(value.GetInt64())));
 #endif
         }
         else if( value.IsUint64() ) {
 #ifdef USE_PYBIND11_PYTHON_BINDINGS
             return py::int_(value.GetUint64());
 #else
-            return py::to_object(py::handle<>(PyInt_FromLong(value.GetUint64())));
+            return py::to_object(py::handle<>(PyLong_FromLong(value.GetUint64())));
 #endif
         }
         else if( value.IsInt() ) {
 #ifdef USE_PYBIND11_PYTHON_BINDINGS
             return py::int_(value.GetInt());
 #else
-            return py::to_object(py::handle<>(PyInt_FromLong(value.GetInt())));
+            return py::to_object(py::handle<>(PyLong_FromLong(value.GetInt())));
 #endif
         }
         else if( value.IsUint() ) {
 #ifdef USE_PYBIND11_PYTHON_BINDINGS
             return py::int_(value.GetUint());
 #else
-            return py::to_object(py::handle<>(PyInt_FromLong(value.GetUint())));
+            return py::to_object(py::handle<>(PyLong_FromLong(value.GetUint())));
 #endif
         }
         else {
