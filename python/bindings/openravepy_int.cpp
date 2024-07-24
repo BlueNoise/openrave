@@ -3263,7 +3263,7 @@ PyInterfaceBasePtr RaveCreateInterface(PyEnvironmentBasePtr pyenv, InterfaceType
 BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(LoadURI_overloads, LoadURI, 1, 2)
 BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(LoadJSON_overloads, LoadJSON, 2, 4)
 BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(ReadRobotJSON_overloads, ReadRobotJSON, 1, 3)
-BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(ReadKinBodyJSON_overloads, ReadKinBody, 1, 3)
+BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(ReadKinBodyJSON_overloads, ReadKinBodyJSON, 1, 3)
 BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(SetCamera_overloads, SetCamera, 2, 4)
 BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(StartSimulation_overloads, StartSimulation, 1, 2)
 BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(StopSimulation_overloads, StopSimulation, 0, 1)
