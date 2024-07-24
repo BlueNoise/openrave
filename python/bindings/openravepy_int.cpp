@@ -1983,7 +1983,7 @@ object PyEnvironmentBase::WriteToMemory(const std::string &filetype, const int o
         return py::cast<py::object>(PyString_FromStringAndSize(output.data(), output.size()));
 #endif
 #else
-        return py::to_object(py::handle<>(PyString_FromStringAndSize(output.data(), output.size())));
+        return py::to_object(py::handle<>(PyBytes_FromStringAndSize(output.data(), output.size())));
 #endif
     }
 }
